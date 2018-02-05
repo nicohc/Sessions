@@ -1,0 +1,12 @@
+<h3>Editer le profil du user</h3>
+
+<%= form_tag user_path(@user), method: :put do %>
+  <%= render 'form' %>
+  <br><br>
+  <%= submit_tag "Modifier le user"%>
+<% end %>
+<br>
+<h4>Effacer le profil</h4>
+<%= link_to 'Cliquer ici pour effacer ce profil', @user, method: :delete %>
+<br><br>
+<%= link_to 'Retour', user_path %>
