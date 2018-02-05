@@ -1,0 +1,11 @@
+<h2>Inscription</h2>
+<p>Bonjour, pour inscrire un nouveau moussailllon,
+  <br>veuillez remplir les champs suivants :
+</p>
+<%= form_tag (moussaillons_path) do %>
+  <%= render 'form' %>
+<br><br>
+<%= submit_tag "Créer !"%>
+<% end %>
+<br>
+<p> <a href="/">Retourner à l'accueil</a> </p>

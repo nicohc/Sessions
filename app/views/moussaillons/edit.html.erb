@@ -1,0 +1,12 @@
+<h3>Editer le profil du moussaillon</h3>
+
+<%= form_tag moussaillon_path(@moussaillon), method: :put do %>
+  <%= render 'form' %>
+  <br><br>
+  <%= submit_tag "Modifier le moussaillon"%>
+<% end %>
+<br>
+<h4>Effacer le profil</h4>
+<%= link_to 'Cliquer ici pour effacer ce profil', @moussaillon, method: :delete %>
+<br><br>
+<%= link_to 'Retour', moussaillon_path %>

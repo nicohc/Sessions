@@ -1,0 +1,15 @@
+Voici les informations entrées :
+<br><br>
+<h1>Prénom: <%= @moussaillon.firstname %></h1>
+<br>
+<p>Age: <%= @moussaillon.age %>
+</p>
+<br>
+<p>Plat préféré: <%= @moussaillon.likeness %>
+</p>
+<br>
+<p> <%= link_to "Rectifier les inforamtions", edit_moussaillon_path%></p>
+<p> <%= link_to 'Supprimer ce profil', moussaillon_path(@moussaillon), method: :delete ,
+              data: { confirm: 'Etes vous sur ?' }%></p>
+<br>
+<p> <a href="/">Retourner à l'accueil</a> </p>

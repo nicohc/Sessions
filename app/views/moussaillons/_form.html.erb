@@ -1,0 +1,23 @@
+<% if @moussaillon.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@moussaillon.errors.count, "error") %> prohibited
+      this article from being saved:
+    </h2>
+    <ul>
+      <% @moussaillon.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<%= label_tag 'firstname', "Prénom :" %>
+<%= text_field_tag 'firstname' %>
+<br>
+<%= label_tag 'age', 'Age :' %>
+<%= text_field_tag 'age' %>
+<br>
+<%= radio_button_tag(:likeness, "moussaka") %>
+<%= label_tag(:plat_moussaka, "J'aime la moussaka") %>
+<%= radio_button_tag(:likeness, "choux de bruxelles ") %>
+<%= label_tag(:plat_chouxdebruxelles, "Je préfère les choux de Bruxelles") %>

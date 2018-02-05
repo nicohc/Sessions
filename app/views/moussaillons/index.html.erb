@@ -1,0 +1,28 @@
+<h3>
+  Liste des inscrits :
+</h3>
+<table>
+  <tr>
+    <th>ID du moussaillon</th>
+    <th>Prénom</th>
+    <th>Age</th>
+    <th>Plat</th>
+  </tr>
+  <br>
+  <% @moussaillons.each do |moussaillon| %>
+  <tr>
+    <td><%= moussaillon.id %></td>
+    <td><%= moussaillon.firstname %></td>
+    <td><%= moussaillon.age %></td>
+    <td><%= moussaillon.likeness %></td>
+    <td><%= link_to "Voir le profil", moussaillon_path(moussaillon) %></td>
+    <td><%= link_to "Editer", edit_moussaillon_path(moussaillon) %></td>
+    <td><%= link_to 'Detruire', moussaillon_path(moussaillon),
+            method: :delete,
+            data: { confirm: 'Etes vous sûr de votre acte irréversible ?' } %></td>
+
+  </tr>
+  <% end %>
+</table>
+<br><br>
+<%= link_to "Inscrire un nouveau moussaillon", '/moussaillons/new' %>
