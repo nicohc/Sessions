@@ -3,8 +3,16 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Accueil", '/' %></li>
-        <li><%= link_to "Index des users", '/users/' %></li>
-        <li><%= link_to "Nouveau user", '/users/new' %></li>
+        <% if logged_in? %>
+            <li><%= link_to "Index des utilisateurs", '/users/' %></li>
+            <li><%= link_to "Mon profil", current_user %></li>
+            <li class="divider"></li>
+            <li><%= link_to "Déconnexion", logout_path, method: :delete %> </li>
+
+        <% else %>
+            <li><%= link_to "S'inscrire", '/users/new' %></li>
+            <li><%= link_to "Se connecter", login_path %></li>
+        <% end %>
       </ul>
     </nav>
   </div>

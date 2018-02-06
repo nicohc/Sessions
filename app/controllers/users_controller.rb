@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   def home
+
   end
 
   def index
@@ -14,6 +15,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if  @user.save
+      log_in @user
       flash[:success] = "Bienvenue, Vous êtes bien inscrits." #Permet d'afficher une pop-up de confirmation de l'inscription.
       redirect_to @user  #Si la création du nouveau profil est bien réalisée, alors on fait afficher le profil crée via la fonction SHOW
     else
@@ -45,6 +47,7 @@ class UsersController < ApplicationController
     redirect_to users_path
     #On redirige vers l'index
   end
+
 
 
   private

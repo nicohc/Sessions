@@ -1,0 +1,11 @@
+<% if logged_in? %>
+    Bonjour, si vous voyez ce message , alors cela veut dire que vous faites partie des notres.
+    <Br>Remercions notre grand gourou Skippy.
+    <br><iframe width="560" height="315" src="https://www.youtube.com/embed/dOJwGl3yLMU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<% else %>
+    <%= flash.now[:danger] = 'Tu fais mauvaise route, reprends toi'%>
+    <p> Rejoins nous, et tu découvriras le Nirvana. </p>
+    <%= link_to "S'inscrire", '/users/new' %>
+    <br><%= link_to "Se connecter", login_path %>
+<% end %>
