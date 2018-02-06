@@ -8,3 +8,6 @@ Ce projet permet de :
 - Créer une session temporaire (jusqu'à fermeture du navigateur)
 - De limiter l'accès à des pages/urls si le visiteur n'est pas connecté
 - Vous convertir à la religion du grand Richnou et son prophète Skippy.
+
+Testez ce site ici :
+https://salty-island-23471.herokuapp.com
