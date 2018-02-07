@@ -9,5 +9,7 @@ Ce projet permet de :
 - De limiter l'accès à des pages/urls si le visiteur n'est pas connecté
 - Vous convertir à la religion du grand Richnou et son prophète Skippy.
 
+! Le projet a évolué, il incorpore les cookies dans sa version supérieure :  => Projet Cookies
+
 Testez ce site ici :
-https://salty-island-23471.herokuapp.com
+https://thp-nico-projet-cookie.herokuapp.com/
